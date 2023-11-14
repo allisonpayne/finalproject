@@ -15,4 +15,6 @@ The paper's Github is [here](https://github.com/LukeOzsanlav/GWfGMetapopDemograp
 
 The Zenodo repository is [here](https://zenodo.org/records/8116139).
 
+**Paper description:** This paper looks at a metapopulation of Greenland White-fronted geese (*Albifrons flavrostris*). There are two subpopulations: a southerly and northerly. One subpopulation is doing worse than the other, and so this paper performed analyses on the metapopulation and compared them for each subpopulation.
+
 Let's look through the dataaaaa \<3
