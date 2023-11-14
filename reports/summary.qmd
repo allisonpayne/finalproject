@@ -1,3 +1,12 @@
+---
+title: "Replication for Geese"
+format: 
+  html: 
+    echo: false
+editor: visual
+bibliography: references.bib
+---
+
 ## Replicating a metapopulation analysis
 
 We are replicating [@ozsanlav2023differing], 'Differing drivers of decline within a migratory metapopulation has implications for future conservation'.
