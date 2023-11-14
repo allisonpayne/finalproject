@@ -18,3 +18,5 @@ The Zenodo repository is [here](https://zenodo.org/records/8116139).
 **Paper description:** This paper looks at a metapopulation of Greenland White-fronted geese (*Albifrons flavrostris*). There are two subpopulations: a southerly and northerly. One subpopulation is doing worse than the other, and so this paper performed analyses on the metapopulation and compared them for each subpopulation.
 
 Let's look through the dataaaaa \<3
+
+### **how the figure supports the key finding:** In figure 2, Ozsanlav-Harris et al., 2023 explore how winter population counts and percentagage of juveniles vary between 1983 and 2018. This paper explored how temperature and percipitation influence reproductive success in Greenland White Fronted Geese. Thus, through this figure, the authors could visualize how populations have declined over the course of the study period. This team then compared these changes in population size to environmental conditions. 
