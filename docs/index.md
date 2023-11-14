@@ -6,7 +6,7 @@ editor_options:
 
 *Welcome to our final project website!*
 
-[Allison Payne](allisonpayne.github.io/finalproject)
+[Allison Payne](https://allisonpayne.github.io/finalproject)
 
 [Emily Nazario](https://github.com/enazario11/finalproject)
 
