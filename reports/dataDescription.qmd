@@ -1,0 +1,8 @@
+---
+title: "Description of Goose [Meta]Data"
+author: "Salma Abdel-Raheem, Allison Payne, Emily Nazario"
+format: html
+editor: visual
+---
+
+## Describing the data used for goose study replication
