@@ -6,3 +6,9 @@ editor: visual
 ---
 
 ## Describing the data used for goose study replication
+
+The data used for this replication are pretty straight forward. There are two main dataframes with which we anticipate working, `GWfG_Islay_Wexford_young_counts_long_format` and `GWfG_Pop_counts.`
+
+The first dataframe describes the number of juvenile geese estimated in the two main sub-populations, `Islay` and `Wexford` and has 3 data columns. The first column, `data_year` is the year during which data were collected, the second column, `perc_young`, is the percentage of juveniles counted for a given sub-population, and the third column, `Ringing.location`, contains the 4-letter codes for the different sub-populations sampled in the original study.
+
+The second dataframe describes the population estimates overall and for both `Islay` and `Wexford` and is composed of 5 data columns. The first column, `spring,` contains the year from which data were collected, the second column, `Population estimate`, contains the overall goose population estimates across both areas, whereas the third and fourth columns, `Wexford` and `Islay` contain sub-population estimates of geese at those respective sites, and the final column, `Missing data`, is a logical vector that describes whether or not data were missing for a given year.
