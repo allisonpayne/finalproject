@@ -15,6 +15,7 @@ editor_options:
 We're replicating Ozsanlav-Harris et al. 2023. Read more about the paper
 and our replication plan [here](summary.html).
 
-
+The data we need to replicate Fig 2 is described [here](dataDescription.html)
 
 The flowchart describing our plan can be found [here](flow.html)
+
