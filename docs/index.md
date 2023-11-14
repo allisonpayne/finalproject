@@ -8,9 +8,13 @@ editor_options:
 
 [Allison Payne](allisonpayne.github.io/finalproject)
 
-Emily Nazario
+[Emily Nazario](https://github.com/enazario11/finalproject)
 
 [Salma Abdel-Raheem](https://github.com/stabdelraheem/finalproject)
 
 We're replicating Ozsanlav-Harris et al. 2023. Read more about the paper
 and our replication plan [here](summary.html).
+
+
+
+The flowchart describing our plan can be found [here](flow.html)
