@@ -1,1 +1,7 @@
 ## Replicating a metapopulation analysis
+
+We are replicating [@ozsanlav2023differing], 'Differing drivers of decline within a migratory metapopulation has implications for future conservation'.
+
+The paper's Github is [here](https://github.com/LukeOzsanlav/GWfGMetapopDemography).
+
+The Zenodo repository is [here](https://zenodo.org/records/8116139).
