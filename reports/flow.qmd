@@ -4,4 +4,4 @@ format: html
 editor: visual
 ---
 
-Flow chart coming soon to a github near you!
+![](img/flowchart.jpg){fig-align="center"}
