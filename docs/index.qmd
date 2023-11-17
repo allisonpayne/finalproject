@@ -1,11 +1,8 @@
 ---
-format: html
 editor_options: 
   markdown: 
     wrap: 72
 ---
-
-# Where has my goose gone?
 
 *Welcome to our final project website!*
 
