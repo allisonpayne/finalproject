@@ -5,7 +5,11 @@ library(zoo) #used for calculating moving average
 
 #### load data ####
 pop_count <- read.csv(here("data/OG/GWfG Pop counts.csv"))
-saveRDS(pop_count, here("data/outputs/pop_count.RDS"))
+pop_count_long <- pivot_longer(data = pop_count, 
+                          cols = c("Population.estimate", "Wexford", "Islay"), 
+                          names_to = "site", values_to = "count") %>% 
+  select(-c("Missing.data", "X"))
+saveRDS(pop_count_long, here("data/outputs/pop_count.RDS"))
 
 young_count <- read.csv(here("data/OG/GWfG Islay Wexford young counts long format.csv"))
 saveRDS(young_count, here("data/outputs/young_count.RDS"))
