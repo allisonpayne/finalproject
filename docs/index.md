@@ -26,4 +26,6 @@ The flowchart describing our plan can be found [here](flow.html).
 
 Visualization was done [here](viz.html).
 
+The manuscript about our process can be found [here](paper.html).
+
 {{< video https://www.youtube.com/watch?v=o8n-y9gVadA >}}
