@@ -23,6 +23,6 @@ The data we need to replicate Fig 2 is described
 
 The flowchart describing our plan can be found [here](flow.html).
 
-Visualization was done [here](viz.qmd).
+Visualization was done [here](viz.html).
 
 {{< video https://www.youtube.com/watch?v=o8n-y9gVadA >}}
