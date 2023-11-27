@@ -1,0 +1,16 @@
+---
+title: "Manuscript"
+author: "Salma Abdel-Raheem, Emily Nazario, Allison Payne"
+format: html
+editor: visual
+---
+
+## Paper Description
+
+## Data Summary 
+
+## Analysis Summary
+
+## Results
+
+## Discussion
