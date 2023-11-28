@@ -49,6 +49,6 @@ pop_plot <- pop_counts %>%
        x = "Year", 
        y = "Winter population count")
 
-ggpubr::ggarrange(pop_plot, young_plot, ncol = 1)
+ggpubr::ggarrange(pop_plot, young_plot, ncol = 1, labels = "auto")
 
 ```
