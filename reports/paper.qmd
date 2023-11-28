@@ -7,11 +7,13 @@ editor: visual
 
 ## Paper Description
 
-[Ozsanlav-Harris et al.2023](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.10281) looks at two UK sub-populations of the Greenland white-fronted goose (*albifrons flavirostris*): one at Islay and one at Wexford. They compared each sub-population with a meta-population to see if trends in the sub-populations mirrored trends in the meta-population. Their findings have implications for conservation, since management decisions are sometimes made for an entire species without taking into variation between populations. We wanted to replicate figure 2, in which the authors explore how winter population counts and percentagage of juveniles vary between 1983 and 2018. Through this figure, the authors visualize how populations have declined over the course of the study period, and whether the sub-populations mirror the meta-population.
-
+Ozsanlav-Harris et al. 2023 plotted how Ireland sub-population counts and percentages of juvenile Greenland White Fronted Geese changed from 1983 to 2019 using annual census data. This team was specifically interested in understanding how population counts and reproduction changed with varying temperatures and precipitation. From this set of figures, they identified that the metapopulation has declined since 1999 but only one of the metapopulations has mirrored this trend.
 ![Figure 2 from Ozsanlav-Harris et al., 2023.](img/og_fig.png){fig-align="center"}
 
 ## Data Summary
+
+The data provided by Ozsanlav-Harris et al. 2023 was saved as two CSV files. The CSV file for the entire metapopulation included the year the spring census was conducted, the whole population size estimate, and the counts per metapopulation. We then modified this original file so that the metapopulation data was in long format rather than in wide. The CSV file for the juveniles included the year and the percent juveniles for each metapopulation.
+[Ozsanlav-Harris et al.2023](https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.10281) looks at two UK sub-populations of the Greenland white-fronted goose (*albifrons flavirostris*): one at Islay and one at Wexford. They compared each sub-population with a meta-population to see if trends in the sub-populations mirrored trends in the meta-population. Their findings have implications for conservation, since management decisions are sometimes made for an entire species without taking into variation between populations. We wanted to replicate figure 2, in which the authors explore how winter population counts and percentagage of juveniles vary between 1983 and 2018. Through this figure, the authors visualize how populations have declined over the course of the study period, and whether the sub-populations mirror the meta-population.
 
 ## Analysis Summary
 
