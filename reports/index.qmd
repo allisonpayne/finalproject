@@ -1,4 +1,5 @@
 ---
+title: "Replications for Geese"
 editor_options: 
   markdown: 
     wrap: 72
@@ -20,5 +21,9 @@ The data we need to replicate Fig 2 is described
 [here](dataDescription.html).
 
 The flowchart describing our plan can be found [here](flow.html).
+
+The code for creating the figures is [here](viz.html). 
+
+Our manuscript is [here](paper.html).
 
 {{< video https://www.youtube.com/watch?v=o8n-y9gVadA >}}
