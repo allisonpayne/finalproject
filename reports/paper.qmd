@@ -24,7 +24,8 @@ Our data analysis comprised of regenerating the Figure 2 of the original manuscr
 To visualize the global, Islay, and Wexford population counts for Fig. 2A, we reformatted the `GWfG Pop counts.csv` using the `pivot_longer()` command. This allowed us to consolidate data such that instead of each population having an associated data column populated with population counts, we made one `site` and one `count` column that together describe the site and its associated population count. This manipulation allowed us to specify `site` as a value on to which we could map different `geom_line()` values and visualize the three different population counts.
 
 ```{r}
-#| indclude = FALSE
+#| include: FALSE
+#| 
 library(tidyverse) 
 library(zoo) #used for calculating moving average 
 library(here)
