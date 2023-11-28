@@ -52,3 +52,5 @@ young_count <- young_count %>%
 ## Results
 
 ## Discussion
+
+The trends in our figure aligned with those presented in the original figure from the paper. This is likely because the data available from this group was already processed, leaving less room for error when attempting to reproduce their figure. There may be marginal differences, however, in panel b due to differences in how the rolling average may have been calculated. Though, overall, the figure looks nearly identical to the one presented in the paper.
