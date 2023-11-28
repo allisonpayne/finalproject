@@ -63,3 +63,5 @@ young_count <- young_count %>%
 ## Results
 
 ## Discussion
+
+Overall, the data was organized and well-documented. However, the data that we downloaded seemed to be processed and cleaned already - for example, percentages were already calculated, so we clearly were not seeing the raw data. Therefore while we were able to replicate the figure, the raw data would be necessary to confirm the results. We also had to make some assumptions about how the rolling averages were calculated. We chose to calculate a centered rolling mean, but they may have chosen a left or right rolling mean. We also had to make some decisions about what to do with missing data points - we just excluded them, but it seems like they might be included on the original figure. Finally, looking at their GitHub, they had a lot of customization of ggplot - we were able to get relatively close without that degree of customization.
