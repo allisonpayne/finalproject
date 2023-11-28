@@ -24,7 +24,15 @@ Our data analysis comprised of regenerating the Figure 2 of the original manuscr
 To visualize the global, Islay, and Wexford population counts for Fig. 2A, we reformatted the `GWfG Pop counts.csv` using the `pivot_longer()` command. This allowed us to consolidate data such that instead of each population having an associated data column populated with population counts, we made one `site` and one `count` column that together describe the site and its associated population count. This manipulation allowed us to specify `site` as a value on to which we could map different `geom_line()` values and visualize the three different population counts.
 
 ```{r}
-library(tidyverse)
+#| indclude = FALSE
+library(tidyverse) 
+library(zoo) #used for calculating moving average 
+library(here)
+
+```
+
+```{r}
+
 pop_count <- read.csv(here("data/OG/GWfG Pop counts.csv"))
 pop_count_long <- pivot_longer(data = pop_count, 
                           cols = c("Population.estimate", "Wexford", "Islay"), 
@@ -44,6 +52,8 @@ max_mp <- pop_count$spring[which.max(pop_count$Population.estimate)]
 To visualize the proportion of young geese observed and calculate the 3-year running average in the Islay and Wexford sub-populations for Fig. 2B, we used the `zoo` package and `roll_mean ()` function to calculate the 3-year running average. The paper did not specify how the running average was calculated, but we assumed a default of `center` alignment in which the mean is calculated by using one value to the left and another to the right of the central value.
 
 ```{r}
+young_count <- read.csv(here("data/OG/GWfG Islay Wexford young counts long format.csv"))
+
 young_count <- young_count %>%
   group_by(Ringing.location) %>%
   mutate(roll_mean = rollmean(Perc_young, k = 3, align = "center", fill = NA))
