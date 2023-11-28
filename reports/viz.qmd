@@ -23,15 +23,17 @@ young_plot <- ggplot(young_count, aes(x = data_year, y = Perc_young)) +
   scale_color_manual(values = c("dodgerblue3", "darkorange3")) + 
   geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
   theme_bw() + 
-  theme(panel.grid = element_blank(), legend.position = c(.9, .9)) + 
+  theme(panel.grid = element_blank(), legend.position = "none") + 
   labs(color = "Populations", 
        x = "Year", 
        y = "Percentage of juveniles")
 
-young_plot
 ```
 
-```{r}
+```{r} 
+#| fig-width: 6
+#| fig-height: 8
+
 pop_plot <- pop_counts %>% 
   drop_na() %>% 
   ggplot(aes(x = spring, y = count)) + 
@@ -41,11 +43,12 @@ pop_plot <- pop_counts %>%
   geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
   theme_bw() + 
   theme(panel.grid = element_blank(), 
-        legend.position = c(.9, .9)) + 
+        legend.position = c(.83, .83), 
+        legend.margin = margin(t = 0)) + 
   labs(color = "Populations", 
        x = "Year", 
        y = "Winter population count")
 
-pop_plot
+ggpubr::ggarrange(pop_plot, young_plot, ncol = 1)
 
 ```
