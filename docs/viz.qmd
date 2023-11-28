@@ -36,7 +36,7 @@ pop_plot <- pop_counts %>%
   ggplot(aes(x = spring, y = count)) + 
   geom_point(aes(color = site), linecolor = "gray60") + 
   geom_line(aes(color = site), size = 1.5) + 
-  scale_color_manual(values = c("aquamarine4", "dodgerblue3", "darkorange3")) + 
+  scale_color_manual(values = c("dodgerblue3", "aquamarine4", "darkorange3")) + 
   geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
   theme_bw() + 
   theme(panel.grid = element_blank(), 
