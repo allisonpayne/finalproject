@@ -17,7 +17,9 @@ max_mp <- readRDS(here::here("data/outputs/max_metpop.RDS"))
 ```
 
 ```{r}
-young_plot <- ggplot(young_count, aes(x = data_year, y = Perc_young)) + 
+young_plot <- young_count %>% 
+  drop_na() %>% 
+  ggplot(aes(x = data_year, y = Perc_young)) + 
   geom_line(aes(x = data_year, y = roll_mean, color = Ringing.location), linewidth = 2) + 
   geom_line(aes(color = Ringing.location), alpha = 0.2, size = 1.5) + 
   scale_color_manual(values = c("dodgerblue3", "darkorange3")) + 
@@ -27,10 +29,10 @@ young_plot <- ggplot(young_count, aes(x = data_year, y = Perc_young)) +
   labs(color = "Populations", 
        x = "Year", 
        y = "Percentage of juveniles")
-
+young_plot
 ```
 
-```{r} 
+```{r}
 #| fig-width: 6
 #| fig-height: 8
 
