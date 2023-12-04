@@ -50,7 +50,7 @@ We indexed the `pop_count` dataframe to find the year at which the population co
 max_mp <- pop_count$spring[which.max(pop_count$Population.estimate)]
 ```
 
-To visualize the proportion of young geese observed and calculate the 3-year running average in the Islay and Wexford sub-populations for Fig. 2B, we used the `zoo` package and `roll_mean ()` function to calculate the 3-year running average. The paper did not specify how the running average was calculated, but we assumed a default of `center` alignment in which the mean is calculated by using one value to the left and another to the right of the central value.
+To visualize the proportion of young geese observed and calculate the 3-year running average in the Islay and Wexford sub-populations for Fig. 2B, we used the `zoo` package and `roll_mean()` function to calculate the 3-year running average. First we used `group_by` to sort the data by sub-population, and then we applied the `roll_mean()` function on the two unique groups so that we ultimately had a 3-year running average for each year of data per sub-population. The paper did not specify how the running average was calculated, but we assumed a default of `center` alignment in which the mean is calculated by using one value to the left and another to the right of the central value. We replicated the author's visualization style and increased transparency on the observed data and left the 3-year running averages for the two sub-populations at full opacity.
 
 ```{r}
 young_count <- read.csv(here("data/OG/GWfG Islay Wexford young counts long format.csv"))
@@ -61,6 +61,33 @@ young_count <- young_count %>%
 ```
 
 ## Results
+
+Fig. 2A [@fig-2A] describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
+
+```{r}
+#| label: fig-2A  
+#| fig-width: 6
+#| fig-height: 8
+
+pop_plot <- pop_counts %>% 
+  drop_na() %>% 
+  ggplot(aes(x = spring, y = count)) + 
+  geom_point(aes(color = site), color = "gray60") + 
+  geom_line(aes(color = site), size = 1.5) + 
+  scale_color_manual(values = c("aquamarine4", "dodgerblue3", "darkorange3")) + 
+  geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
+  theme_bw() + 
+  theme(panel.grid = element_blank(), 
+        legend.position = c(.83, .83), 
+        legend.margin = margin(t = 0)) + 
+  labs(color = "Populations", 
+       x = "Year", 
+       y = "Winter population count")
+
+ggpubr::ggarrange(pop_plot, young_plot, ncol = 1, labels = "auto")
+```
+
+Fig. 2A (\@fig-2A) describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
 
 ## Discussion
 
