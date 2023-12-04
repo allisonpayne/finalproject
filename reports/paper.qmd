@@ -24,7 +24,8 @@ Our data analysis comprised of regenerating the Figure 2 of the original manuscr
 To visualize the global, Islay, and Wexford population counts for Fig. 2A, we reformatted the `GWfG Pop counts.csv` using the `pivot_longer()` command. This allowed us to consolidate data such that instead of each population having an associated data column populated with population counts, we made one `site` and one `count` column that together describe the site and its associated population count. This manipulation allowed us to specify `site` as a value on to which we could map different `geom_line()` values and visualize the three different population counts.
 
 ```{r}
-#| indclude = FALSE
+#| include: FALSE
+#| 
 library(tidyverse) 
 library(zoo) #used for calculating moving average 
 library(here)
@@ -89,3 +90,7 @@ ggpubr::ggarrange(pop_plot, young_plot, ncol = 1, labels = "auto")
 Fig. 2A (\@fig-2A) describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
 
 ## Discussion
+
+The trends in our figure aligned with those presented in the original figure from the paper. This is likely because the data available from this group was already processed, leaving less room for error when attempting to reproduce their figure. There may be marginal differences, however, in panel b due to differences in how the rolling average may have been calculated. Though, overall, the figure looks nearly identical to the one presented in the paper.
+
+Overall, the data was organized and well-documented. However, the data that we downloaded seemed to be processed and cleaned already - for example, percentages were already calculated, so we clearly were not seeing the raw data. Therefore while we were able to replicate the figure, the raw data would be necessary to confirm the results. We also had to make some assumptions about how the rolling averages were calculated. We chose to calculate a centered rolling mean, but they may have chosen a left or right rolling mean. We also had to make some decisions about what to do with missing data points - we just excluded them, but it seems like they might be included on the original figure. Finally, looking at their GitHub, they had a lot of customization of ggplot - we were able to get relatively close without that degree of customization.
