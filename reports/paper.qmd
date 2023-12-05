@@ -36,7 +36,8 @@ library(cowplot)
 We indexed the `pop_count` dataframe to find the year at which the population count was highest. We saved this value to its own vector called `max_mp` so that we could recreate the dashed line observed in Fig. 2 which represents the metapopulation peak.
 
 ```{r}
-max_mp <- pop_count$spring[which.max(pop_count$Population.estimate)]
+
+max_mp <- read_rds(here("data/outputs/max_metpop.RDS"))
 ```
 
 To visualize the proportion of young geese observed and calculate the 3-year running average in the Islay and Wexford sub-populations for Fig. 2B, we used the `zoo` package and `roll_mean()` function to calculate the 3-year running average. First we used `group_by` to sort the data by sub-population, and then we applied the `roll_mean()` function on the two unique groups so that we ultimately had a 3-year running average for each year of data per sub-population. The paper did not specify how the running average was calculated, but we assumed a default of `center` alignment in which the mean is calculated by using one value to the left and another to the right of the central value. We replicated the author's visualization style and increased transparency on the observed data and left the 3-year running averages for the two sub-populations at full opacity.
@@ -59,8 +60,9 @@ Fig. 2B \[\@fig-2B\] describes the percentage of juvenile geese (paler lines) an
 #| label: fig-2A  
 #| fig-width: 6
 #| fig-height: 8
-
+#| 
 pop_count <- read_rds(here("data/outputs/pop_count.RDS"))
+
 
 young_plot <- young_count %>% 
   drop_na() %>% 
@@ -68,7 +70,7 @@ young_plot <- young_count %>%
   geom_line(aes(x = data_year, y = roll_mean, color = Ringing.location), linewidth = 2) + 
   geom_line(aes(color = Ringing.location), alpha = 0.2, size = 1.5) + 
   scale_color_manual(values = c("dodgerblue3", "darkorange3")) + 
-  geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
+  geom_vline(aes(xintercept = max_mp), linetype = "dashed", color = "gray60") + 
   theme_bw() + 
   theme(panel.grid = element_blank(), legend.position = "none") + 
   labs(color = "Populations", 
@@ -81,7 +83,7 @@ pop_plot <- pop_count %>%
   geom_point(aes(color = site), color = "gray60") + 
   geom_line(aes(color = site), linewidth = 1.5) + 
   scale_color_manual(values = c("aquamarine4", "dodgerblue3", "darkorange3")) + 
-  geom_vline(aes(xintercept = max_mp), linetype = "dashed") + 
+  geom_vline(aes(xintercept = max_mp), linetype = "dashed", color = "gray60") + 
   theme_bw() + 
   theme(panel.grid = element_blank(), 
         legend.position = c(.83, .83), 
@@ -94,6 +96,10 @@ pop_plot <- pop_count %>%
 plot_grid(pop_plot, young_plot, ncol = 1, labels = "auto")
 
 ```
+
+
+Fig. 2A (@fig-2A) describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
+
 
 ## Discussion
 
