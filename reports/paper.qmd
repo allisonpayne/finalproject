@@ -51,7 +51,9 @@ young_count <- young_count %>%
 
 ## Results
 
-Fig. 2A [@fig-2A] describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
+Fig. 2A [@fig-2A] describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.\
+
+Fig. 2B \[\@fig-2B\] describes the percentage of juvenile geese (paler lines) and the 3-year running average (bold lines). Both Islay and Wexford sub-populations of juvenile geese mirrored each other in their trends over time. The Islay sub-population (blue line) trended slightly higher than the Wexford (orange line) population in both observed and running juvenile counts.
 
 ```{r}
 #| label: fig-2A  
@@ -92,8 +94,6 @@ pop_plot <- pop_count %>%
 plot_grid(pop_plot, young_plot, ncol = 1, labels = "auto")
 
 ```
-
-Fig. 2A (\@fig-2A) describes how winter population counts of geese varied by year at the meta-population \[Global\] level as well as for two sub-populations, Islay and Wexford. The Islay population (blue line) more closely mirrored the trends observed in the Global population (green line), but at a lower magnitude. The Wexford population (orange) was more stable over time in comparison to the Global and Islay population counts.
 
 ## Discussion
 
